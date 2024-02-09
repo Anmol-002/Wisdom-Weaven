@@ -44,6 +44,7 @@ import About from "./component/layout/About/About.js";
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
+  axios.defaults.withCredentials = true;
   const dispatch = useDispatch();
 
   const [stripeApiKey, setStripeApiKey] = useState("");
